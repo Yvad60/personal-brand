@@ -7,8 +7,10 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
+		"test": "jest",
+		"coverage": "jest --coverage --colors",
 		"start": "webpack-dev-server .",
-		"build": "Webpack .",
+		"build": "webpack .",
 		"prepare": "husky install",
 		"format": "prettier . --write",
 		"lint": "eslint .",
@@ -19,15 +21,19 @@
 		"@babel/core": "^7.17.10",
 		"@babel/preset-env": "^7.17.10",
 		"@babel/preset-react": "^7.16.7",
+		"@testing-library/react": "^13.2.0",
 		"babel-loader": "^8.2.5",
 		"eslint": "^8.14.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jest": "^26.1.5",
 		"eslint-plugin-jsx-a11y": "^6.5.1",
 		"eslint-plugin-react": "^7.29.4",
 		"eslint-plugin-react-hooks": "^4.5.0",
 		"html-webpack-plugin": "^5.5.0",
 		"husky": "^7.0.4",
+		"jest": "^28.0.3",
+		"jest-environment-jsdom": "^28.1.0",
 		"lint-staged": "^12.4.1",
 		"prettier": "2.6.2",
 		"webpack": "^5.72.0",
@@ -40,7 +46,7 @@
 		"react-dom": "^18.1.0"
 	},
 	"lint-staged": {
-		"*.js": "yarn run lint-fix",
-		"*.{js,css,md,hmtl,json}": "yarn run format"
+		"*.{js,jsx}": "yarn run lint-fix",
+		"*.{js,jsx,html,css,json,md}": "yarn run format"
 	}
 }
