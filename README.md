@@ -1,3 +1,5 @@
+[![CI](https://github.com/Yvad60/personal-brand/actions/workflows/main.yaml/badge.svg)](https://github.com/Yvad60/personal-brand/actions/workflows/main.yaml) [![Coverage Status](https://coveralls.io/repos/github/Yvad60/personal-brand/badge.svg?branch=develop)](https://coveralls.io/github/Yvad60/personal-brand?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/87076b09d8d8e79c1c16/maintainability)](https://codeclimate.com/github/Yvad60/personal-brand/maintainability)
+
 # Personal Brand: IvadCode
 
 a personal brand website with blogging system

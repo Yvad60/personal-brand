@@ -1,0 +1,40 @@
+name: Production deploy
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: action/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - name: Install dependencies
+        run: yarn install
+      - name: Check lint errors
+        run: yarn run lint
+      - name: Run tests
+        run: yarn run coverage
+      - name: Check build success
+        run: yarn build
+  deploy:
+    concurrency:
+      group: heroku_deployment
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [build]
+    steps:
+      - name: Checkout branch
+        uses: action/checkout@v3
+      - name: Deploy to heroku
+        uses: AkhileshNS/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'ivadcode-dev'
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
