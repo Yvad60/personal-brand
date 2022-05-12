@@ -1,4 +1,4 @@
-name: Production deploy
+name: Development deploy
 on:
   push:
     branches:
@@ -36,5 +36,5 @@ jobs:
         uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'ivadcode'
+          heroku_app_name: 'ivadcode-dev'
           heroku_email: ${{secrets.HEROKU_EMAIL}}
