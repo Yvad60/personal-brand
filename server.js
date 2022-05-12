@@ -3,8 +3,9 @@ import cors from 'cors';
 import express from 'express';
 import path, { join } from 'path';
 
-const port = process.env.PORT || 3000;
+const __dirname = path.resolve();
 const app = express();
+const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist')));
 
