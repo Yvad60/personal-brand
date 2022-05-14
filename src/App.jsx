@@ -1,7 +1,14 @@
 import React from 'react';
+import { Button, Typography } from '@mui/material';
 
 function App() {
-	return <h1>Ivad Code</h1>;
+	return (
+		<div>
+			<Typography>Ivad code</Typography>
+
+			<Button variant="contained">Click me</Button>
+		</div>
+	);
 }
 
 export default App;
