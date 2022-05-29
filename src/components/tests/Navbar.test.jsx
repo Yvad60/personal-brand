@@ -25,11 +25,11 @@ describe('content tests', () => {
 		const blogLinkText = screen.getByText(/blog/i);
 		expect(blogLinkText).toBeInTheDocument();
 	});
-	it('should contain link', () => {
+	it('should contain about link', () => {
 		const aboutLinkText = screen.getByText(/about/i);
 		expect(aboutLinkText).toBeInTheDocument();
 	});
-	it('should contain about button', () => {
+	it('should contain contact button', () => {
 		const contactButton = screen.getByText(/contact/i);
 		expect(contactButton).toBeInTheDocument();
 	});

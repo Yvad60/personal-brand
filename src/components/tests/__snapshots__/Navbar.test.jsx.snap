@@ -5,14 +5,60 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        Navbar
+      <div
+        class="w-full bg-primary_light flex text-primary_dark font-bold text-xl justify-between py-5 shadow-main px-20"
+      >
+        <img
+          alt="logo"
+          src="test-file-stub"
+        />
+        <ul
+          class="w-1/2 flex justify-between"
+        >
+          <li>
+            Home
+          </li>
+          <li>
+            Blog
+          </li>
+          <li>
+            About
+          </li>
+          <button
+            type="button"
+          >
+            Contact
+          </button>
+        </ul>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
-      Navbar
+    <div
+      class="w-full bg-primary_light flex text-primary_dark font-bold text-xl justify-between py-5 shadow-main px-20"
+    >
+      <img
+        alt="logo"
+        src="test-file-stub"
+      />
+      <ul
+        class="w-1/2 flex justify-between"
+      >
+        <li>
+          Home
+        </li>
+        <li>
+          Blog
+        </li>
+        <li>
+          About
+        </li>
+        <button
+          type="button"
+        >
+          Contact
+        </button>
+      </ul>
     </div>
   </div>,
   "debug": [Function],

@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+/* istanbul ignore file */
 import { createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({
