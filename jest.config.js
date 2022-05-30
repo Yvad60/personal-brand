@@ -5,6 +5,9 @@ const jestConfig = {
 	coverageDirectory: 'coverage',
 	testEnvironment: 'jsdom',
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+	moduleNameMapper: {
+		'\\.(css)$': 'identity-obj-proxy',
+	},
 };
 
 export default jestConfig;

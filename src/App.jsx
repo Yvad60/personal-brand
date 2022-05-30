@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Button, Typography } from '@mui/material';
 import { increment, decrement } from './redux/reducers/counterSlice.js';
+import './app.css';
 
 function App() {
 	const count = useSelector((state) => state.counter.value);
@@ -9,24 +9,18 @@ function App() {
 
 	return (
 		<div>
-			<Typography variant="h2">Sample counter app</Typography>
-			<Typography variant="h2">{count}</Typography>
-			<Button
-				variant="contained"
-				sx={{ mr: 3 }}
-				size="large"
-				onClick={() => dispatch(increment())}
-			>
+			<h2 className="text-3xl text-red-500">Sample counter app</h2>
+			<h2 className="text-5xl">{count}</h2>
+			<button type="button" onClick={() => dispatch(increment())}>
 				Increment
-			</Button>
-			<Button
-				variant="contained"
-				size="large"
-				color="error"
+			</button>
+			<button
+				type="button"
+				className="ml-3"
 				onClick={() => dispatch(decrement())}
 			>
 				Decrement
-			</Button>
+			</button>
 		</div>
 	);
 }

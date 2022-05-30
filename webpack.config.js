@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const webpackConfig = {
-	entry: 'index.js',
+	entry: './index.jsx',
 	mode: 'development',
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -31,6 +31,10 @@ const webpackConfig = {
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
 				use: 'babel-loader',
+			},
+			{
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader', 'postcss-loader'],
 			},
 		],
 	},
